@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "895783182868",
+    "firebase_url": "https://my-rupeaze.firebaseio.com",
+    "project_id": "my-rupeaze",
+    "storage_bucket": "my-rupeaze.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895783182868:android:5da0b3113bc9c0e8b17d01",
+        "android_client_info": {
+          "package_name": "com.myrupeaze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895783182868-mhqnlrsqsukns7u0jvgejl8q9btsc2pg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myrupeaze",
+            "certificate_hash": "bead78e8a79a612987edb96ff9bf83402a73e658"
+          }
+        },
+        {
+          "client_id": "895783182868-nk7i7eucjalqr4j41dhpck9h6d8c1960.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myrupeaze",
+            "certificate_hash": "66f4f7d3f83f92a1514ca4159190eb7e7e3451d1"
+          }
+        },
+        {
+          "client_id": "895783182868-8evmhpslqlpt0dfltd1s5fao56qbkfai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLQJB-yyDb1ePF13-lQhfuTHvRZMp2gxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895783182868-8evmhpslqlpt0dfltd1s5fao56qbkfai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895783182868:android:d7daa3ba2d17420db17d01",
+        "android_client_info": {
+          "package_name": "com.texpediscia.myrupeazedelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895783182868-55gahh3oolgukf31afdej9h0uljburcq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.texpediscia.myrupeazedelivery",
+            "certificate_hash": "bead78e8a79a612987edb96ff9bf83402a73e658"
+          }
+        },
+        {
+          "client_id": "895783182868-8evmhpslqlpt0dfltd1s5fao56qbkfai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLQJB-yyDb1ePF13-lQhfuTHvRZMp2gxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895783182868-8evmhpslqlpt0dfltd1s5fao56qbkfai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

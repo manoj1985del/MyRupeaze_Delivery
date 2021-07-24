@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_sellers">
+
+    <fragment
+        android:id="@+id/nav_sellers"
+        android:name="com.texpediscia.myrupeazedelivery.ui.awaitingsellers.AwaitingSellers"
+        android:label="Pending Pickups"
+        tools:layout="@layout/awaiting_sellers_fragment" />
+
+    <fragment
+        android:id="@+id/nav_customers"
+        android:name="com.texpediscia.myrupeazedelivery.ui.delivery.delivery"
+        android:label="Deliveries"
+        tools:layout="@layout/delivery_fragment" />
+</navigation>

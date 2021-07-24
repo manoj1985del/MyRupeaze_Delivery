@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.texpediscia.myrupeazedelivery">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".OrdersForDeliveryListing"></activity>
+        <activity android:name=".DeliveryListing" />
+        <activity android:name=".ScanCodeActivity" />
+        <activity android:name=".AwaitingOrderListing" />
+        <activity android:name=".AwaitingOrders" />
+        <activity android:name=".SellerListing" />
+        <activity
+            android:name=".LandingPage"
+            android:label="@string/title_activity_landing_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Login" />
+        <activity android:name=".RegisterUser" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".UserOtherDetails" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
