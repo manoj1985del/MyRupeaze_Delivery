@@ -15,5 +15,15 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="Deliveries" />
 
+        <item
+            android:id="@+id/nav_medical_pickups"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Awaiting Medical Pickups" />
+
+        <item
+            android:id="@+id/nav_medical_deliveries"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Medical Deliveries" />
+
     </group>
 </menu>

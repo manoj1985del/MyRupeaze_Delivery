@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OrdersForDeliveryListing"></activity>
+        <activity android:name=".AwaitingMedicalOrders"></activity>
+        <activity android:name=".OrdersForDeliveryListing" />
         <activity android:name=".DeliveryListing" />
         <activity android:name=".ScanCodeActivity" />
         <activity android:name=".AwaitingOrderListing" />

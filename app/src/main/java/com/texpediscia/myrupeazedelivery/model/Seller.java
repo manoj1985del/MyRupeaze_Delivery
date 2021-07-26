@@ -60,5 +60,7 @@ public class Seller implements Serializable {
 
     public List<Orders> ordersList = new ArrayList<>();
 
+    public List<PharmacistRequests> pharmacistRequestsList = new ArrayList<>();
+
 
 }

@@ -16,4 +16,15 @@
         android:name="com.texpediscia.myrupeazedelivery.ui.delivery.delivery"
         android:label="Deliveries"
         tools:layout="@layout/delivery_fragment" />
+    <fragment
+        android:id="@+id/nav_medical_pickups"
+        android:name="com.texpediscia.myrupeazedelivery.ui.awaitingmedical.AwaitingMedicalPickupsFragment"
+        android:label="Pending Medical Pickups"
+        tools:layout="@layout/fragment_awaiting_medical_pickups" />
+
+    <fragment
+        android:id="@+id/nav_medical_deliveries"
+        android:name="com.texpediscia.myrupeazedelivery.ui.medicaldelivery.MedicalDeliveriesFragment"
+        android:label="Medical Deliveries"
+        tools:layout="@layout/fragment_medical_deliveries" />
 </navigation>

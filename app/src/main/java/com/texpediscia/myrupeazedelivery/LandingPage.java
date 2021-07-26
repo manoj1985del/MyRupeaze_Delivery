@@ -49,7 +49,7 @@ public class LandingPage extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                 R.id.nav_sellers, R.id.nav_customers)
+                 R.id.nav_sellers, R.id.nav_customers, R.id.nav_medical_pickups, R.id.nav_medical_deliveries)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

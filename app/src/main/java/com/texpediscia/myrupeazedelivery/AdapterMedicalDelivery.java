@@ -7,22 +7,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.texpediscia.myrupeazedelivery.model.Seller;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.texpediscia.myrupeazedelivery.model.User;
 
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-public class AdapterDeliveryListing extends RecyclerView.Adapter<AdapterDeliveryListing.ViewHolder> {
+public class AdapterMedicalDelivery extends RecyclerView.Adapter<AdapterMedicalDelivery.ViewHolder> {
 
     private List<DeliveryListing> m_lstCustomers;
     private Context m_Context;
 
     IDeliveryOperations mOperation;
 
-    public AdapterDeliveryListing(List<DeliveryListing> lstCustomers, Context ctx, IDeliveryOperations operations){
+    public AdapterMedicalDelivery(List<DeliveryListing> lstCustomers, Context ctx, IDeliveryOperations operations) {
         m_lstCustomers = lstCustomers;
         m_Context = ctx;
         mOperation = operations;
@@ -51,7 +50,8 @@ public class AdapterDeliveryListing extends RecyclerView.Adapter<AdapterDelivery
         holder.txtLandmark.setText(customer.Landmark);
         holder.txtCity.setText(customer.City);
         holder.txtState.setText(customer.State);
-        holder.txtTotalOrders.setText("Total Orders: " + Integer.toString(customer.pharmacistRequestsList.size()));
+        String totalOrders = "Total Orders: " + Integer.toString(customer.pharmacistRequestsList.size());
+        holder.txtTotalOrders.setText(totalOrders);
 
     }
 
@@ -60,7 +60,7 @@ public class AdapterDeliveryListing extends RecyclerView.Adapter<AdapterDelivery
         return m_lstCustomers.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView txtName;
         public TextView txtAddressLine1;
@@ -77,6 +77,7 @@ public class AdapterDeliveryListing extends RecyclerView.Adapter<AdapterDelivery
 
 
         private Context m_ctx;
+
         public ViewHolder(@NonNull View itemView, Context m_Context) {
             super(itemView);
             m_ctx = m_Context;
@@ -98,7 +99,7 @@ public class AdapterDeliveryListing extends RecyclerView.Adapter<AdapterDelivery
         public void onClick(View v) {
 
             int pos = getAdapterPosition();
-            if(pos != RecyclerView.NO_POSITION){
+            if (pos != RecyclerView.NO_POSITION) {
                 DeliveryListing deliveryListing = m_lstCustomers.get(pos);
                 User user = deliveryListing.getmUser();
                 mOperation.selectCustomer(user);

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.texpediscia.myrupeazedelivery.model.Orders;
+import com.texpediscia.myrupeazedelivery.model.PharmacistRequests;
 
 public class OrdersForDeliveryListing extends AppCompatActivity {
 
@@ -15,6 +16,7 @@ public class OrdersForDeliveryListing extends AppCompatActivity {
     }
 
     private Orders mOrder;
+    private PharmacistRequests pharmacistRequests;
 
     public OrdersForDeliveryListing(Orders order){
         mOrder = order;
@@ -22,5 +24,13 @@ public class OrdersForDeliveryListing extends AppCompatActivity {
 
     public Orders getOrder(){
         return mOrder;
+    }
+
+    public OrdersForDeliveryListing(PharmacistRequests requests){
+        pharmacistRequests = requests;
+    }
+
+    public PharmacistRequests getPharmacistRequests(){
+        return pharmacistRequests;
     }
 }

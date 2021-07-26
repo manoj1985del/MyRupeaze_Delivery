@@ -3,6 +3,7 @@ package com.texpediscia.myrupeazedelivery;
 
 import com.texpediscia.myrupeazedelivery.model.Address;
 
+import com.texpediscia.myrupeazedelivery.model.Seller;
 import com.texpediscia.myrupeazedelivery.model.User;
 import com.texpediscia.myrupeazedelivery.model.User;
 
@@ -53,6 +54,8 @@ public class CommonVariables {
     public static String selectedProductCategory = "";
 
     public static User selectedUser = null;
+
+    public static Seller selectedSeller = new Seller();
 
 
 }
