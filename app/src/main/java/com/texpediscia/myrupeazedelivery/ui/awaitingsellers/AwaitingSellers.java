@@ -1,8 +1,12 @@
 package com.texpediscia.myrupeazedelivery.ui.awaitingsellers;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -71,6 +75,7 @@ public class AwaitingSellers extends Fragment implements ISellerOperations {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.awaiting_sellers_fragment, container, false);
+        checkPermission();
         event = this;
         return mView;
     }
@@ -85,6 +90,10 @@ public class AwaitingSellers extends Fragment implements ISellerOperations {
         gifView = mView.findViewById(R.id.gifView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(mView.getContext()));
+
+        listItems.clear();
+        sellerList.clear();
+        orderList.clear();
 
         loadSellersForPendingOrders();
 
@@ -351,11 +360,12 @@ public class AwaitingSellers extends Fragment implements ISellerOperations {
                 });
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        listItems.clear();
-        sellerList.clear();
-        orderList.clear();
+    private void checkPermission() {
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(), new String[] {Manifest.permission.CAMERA}, 1);
+        }
     }
+    
 }

@@ -68,7 +68,6 @@ public class LandingPage extends AppCompatActivity {
         TextView nav_user = (TextView)hView.findViewById(R.id.txtProfileName);
         TextView nav_email = (TextView)hView.findViewById(R.id.txtProfileEmail);
 
-        checkPermission();
 
 
 
@@ -78,13 +77,6 @@ public class LandingPage extends AppCompatActivity {
         }
     }
 
-    private void checkPermission() {
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, requestCode);
-        }
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
