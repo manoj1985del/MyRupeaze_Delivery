@@ -53,7 +53,7 @@ public class AwaitingSellers extends Fragment implements ISellerOperations {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     GifImageView gifView;
 
-    private List<SellerListing> listItems;
+    private List<SellerListing> listItems = new ArrayList<>();
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private List<Seller> sellerList = new ArrayList<>();
@@ -81,7 +81,6 @@ public class AwaitingSellers extends Fragment implements ISellerOperations {
         mViewModel = ViewModelProviders.of(this).get(AwaitingSellersViewModel.class);
         // TODO: Use the ViewModel
 
-        listItems = new ArrayList<>();
         recyclerView = (RecyclerView) mView.findViewById(R.id.sellersRecycler);
         gifView = mView.findViewById(R.id.gifView);
         recyclerView.setHasFixedSize(true);
@@ -350,5 +349,13 @@ public class AwaitingSellers extends Fragment implements ISellerOperations {
                         Log.w("TAG", "Error updating document", e);
                     }
                 });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        listItems.clear();
+        sellerList.clear();
+        orderList.clear();
     }
 }

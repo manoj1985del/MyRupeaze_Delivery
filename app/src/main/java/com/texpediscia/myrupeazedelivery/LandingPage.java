@@ -1,6 +1,9 @@
 package com.texpediscia.myrupeazedelivery;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -10,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -26,9 +31,12 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.TextView;
 
+import static java.security.AccessController.getContext;
+
 public class LandingPage extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    int requestCode = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,11 +68,21 @@ public class LandingPage extends AppCompatActivity {
         TextView nav_user = (TextView)hView.findViewById(R.id.txtProfileName);
         TextView nav_email = (TextView)hView.findViewById(R.id.txtProfileEmail);
 
+        checkPermission();
+
 
 
         if(CommonVariables.loggedInUserDetails != null){
             nav_user.setText(CommonVariables.loggedInUserDetails.Name);
             nav_email.setText(CommonVariables.loggedInUserDetails.Email);
+        }
+    }
+
+    private void checkPermission() {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, requestCode);
         }
     }
 

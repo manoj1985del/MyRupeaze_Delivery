@@ -45,7 +45,7 @@ public class AdapterSellerListing extends RecyclerView.Adapter<AdapterSellerList
         SellerListing listItem = m_lstSellers.get(position);
         Seller seller = listItem.getSeller();
 
-       String sTotalOrders =  Integer.toString(seller.pharmacistRequestsList.size());
+       String sTotalOrders =  Integer.toString(seller.ordersList.size());
 
         holder.txtName.setText(seller.company_name + " (" + sTotalOrders + ")");
         holder.txtAddressLine1.setText(seller.address_line1);
